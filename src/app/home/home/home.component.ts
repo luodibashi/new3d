@@ -642,7 +642,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   	this.targetBase = this.base[0].img;
-  	this.targetId = 1;
+  	this.targetId = this.base[0]['id'];
   	// TemplateStringsArray
 		let a=0;
   	for(let i=0;i<this.pointBase.length; i++){
@@ -1016,5 +1016,5 @@ export class HomeComponent implements OnInit {
   		}
   	// console.log(this.targetId)
   }
-
+	}
 }

@@ -8,7 +8,18 @@
 	<div class="middle">
 		<div class="content">
 			<div class="side">
-				<img class="base" src="{{targetBase}}">
+				<img class="base" [ngClass]="{'activation':targetId===1}" src="{{base[0].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===2}" src="{{base[1].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===3}" src="{{base[2].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===4}" src="{{base[3].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===5}" src="{{base[4].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===6}" src="{{base[5].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===7}" src="{{base[6].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===8}" src="{{base[7].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===9}" src="{{base[8].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===10}" src="{{base[9].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===11}" src="{{base[10].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===12}" src="{{base[11].img}}">
 				<div class="pointBox">
 					<div class="accurate">
 						<div class="unit">
