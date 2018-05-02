@@ -9,51 +9,51 @@ import { ActivatedRoute, Router, Params } from '@angular/router'
 export class HomeComponent implements OnInit {
 	base = [
 		{
-			"img":"./assets/image/00-0.jpg",
+			"img":"./assets/image/1/1.jpg",
 			"id":1
 		},
 		{
-			"img":"./assets/image/01-30.jpg",
+			"img":"./assets/image/1/2.jpg",
 			"id":2
 		},
 		{
-			"img":"./assets/image/02-60.jpg",
+			"img":"./assets/image/1/3.jpg",
 			"id":3
 		},
 		{
-			"img":"./assets/image/03-90.jpg",
+			"img":"./assets/image/1/4.jpg",
 			"id":4
 		},
 		{
-			"img":"./assets/image/04-120.jpg",
+			"img":"./assets/image/1/5.jpg",
 			"id":5
 		},
 		{
-			"img":"./assets/image/05-150.jpg",
+			"img":"./assets/image/1/6.jpg",
 			"id":6
 		},
 		{
-			"img":"./assets/image/06-180.jpg",
+			"img":"./assets/image/1/7.jpg",
 			"id":7
 		},
 		{
-			"img":"./assets/image/07-150.jpg",
+			"img":"./assets/image/1/8.jpg",
 			"id":8
 		},
 		{
-			"img":"./assets/image/08-120.jpg",
+			"img":"./assets/image/1/9.jpg",
 			"id":9
 		},
 		{
-			"img":"./assets/image/09-90.jpg",
+			"img":"./assets/image/1/10.jpg",
 			"id":10
 		},
 		{
-			"img":"./assets/image/10-60.jpg",
+			"img":"./assets/image/1/11.jpg",
 			"id":11
 		},
 		{
-			"img":"./assets/image/11-30.jpg",
+			"img":"./assets/image/1/12.jpg",
 			"id":12
 		}
 	]

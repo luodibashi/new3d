@@ -6,11 +6,11 @@ import { ModuleWithProviders } from "@angular/core";
 const ROUTER_CONFIG: Routes = [
 	{
 		path: '',
-		redirectTo: 'my/home',
+		redirectTo: 'tower/center',
 		pathMatch: 'full'
 	},{
 		path: '**',
-		redirectTo: 'my/home'
+		redirectTo: 'tower/center'
 	},
 	// ...AccountRoutes
 ]
