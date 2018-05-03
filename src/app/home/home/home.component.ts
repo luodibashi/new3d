@@ -89,11 +89,8 @@ export class HomeComponent implements OnInit {
   		this.targetBase = this.base[11].img;
 			let a=19;
 	  	for(let i=0;i<this.pointBase.length; i++){
-	  		// a++;
-	  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-	  			a++;
-	  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-	  		}
+	  		a++;
+				this.pointBase[i]['pointId'] = a;
 	  	}
   	} else {
   		this.targetId--;
@@ -102,161 +99,122 @@ export class HomeComponent implements OnInit {
   		if(this.targetId==1){
 				let a=0;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==2){
 				let a=209;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<2){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=1;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==3){
 				let a=190;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<3){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=2;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==4){
 				let a=171;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<4){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=3;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==5){
 				let a=152;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<5){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=4;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==6){
 				let a=133;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<6){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 		  		}
 		  	}
 		  	let b=0;
 		  	for(let i=5;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==7){
 				let a=114;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<7){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 		  		}
 		  	}
 		  	let b=0;
 		  	for(let i=6;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==8){
 				let a=95;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-	  				this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==9){
 				let a=76;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==10){
 				let a=57;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==11){
 				let a=38;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		}
   	}
@@ -270,11 +228,8 @@ export class HomeComponent implements OnInit {
   		this.targetBase = this.base[0].img;
 			let a=0;
 	  	for(let i=0;i<this.pointBase.length; i++){
-	  		// a++;
-	  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-	  			a++;
-	  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-	  		}
+	  		a++;
+				this.pointBase[i]['pointId'] = a;
 	  	}
   	} else {
   		this.targetId++;
@@ -285,159 +240,120 @@ export class HomeComponent implements OnInit {
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<2){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=1;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==3){
 				let a=190;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<3){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=2;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==4){
 				let a=171;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<4){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=3;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==5){
 				let a=152;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<5){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 			  	}
 		  	}
 		  	let b=0;
 		  	for(let i=4;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==6){
 				let a=133;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<6){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 		  		}
 		  	}
 		  	let b=0;
 		  	for(let i=5;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==7){
 				let a=114;
 		  	for(let i=0;i<this.pointBase.length; i++){
 		  		// a++;
 		  		if(i<7){
-			  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-			  			a++;
-			  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-			  		}
+			  		a++;
+						this.pointBase[i]['pointId'] = a;
 		  		}
 		  	}
 		  	let b=0;
 		  	for(let i=6;i<this.pointBase.length; i++){
 		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			b++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = b;
-		  		}
+		  		b++;
+					this.pointBase[i]['pointId'] = b;
 		  	}
   		} else if(this.targetId==8){
 				let a=95;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-	  				this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==9){
 				let a=76;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==10){
 				let a=57;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==11){
 				let a=38;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		} else if(this.targetId==12){
 				let a=19;
 		  	for(let i=0;i<this.pointBase.length; i++){
-		  		// a++;
-		  		for(let m=0; m<this.pointBase[i]['pointList'].length; m++){
-		  			a++;
-		  			this.pointBase[i]['pointList'][m]['pointId'] = a;
-		  		}
+		  		a++;
+					this.pointBase[i]['pointId'] = a;
 		  	}
   		}
   	// console.log(this.targetId)
