@@ -1,0 +1,185 @@
+<div class="box">
+<!-- 	<div class="leftBox">
+		<div class="menu">全局</div>
+		<div class="menu">应变-温度测点</div>
+		<div class="menu">风压测点</div>
+		<div class="menu">结构变形-GNSS测点</div>
+		<div class="menu">气象站</div>
+	</div> -->
+	<div class="middle">
+		<div class="direction">
+			<i class="fa fa-compass fa-rotate-100"></i>
+		</div>
+		<div class="content">
+			<div class="side">
+				<img class="base" [ngClass]="{'activation':targetId===1}" src="{{base[0].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===2}" src="{{base[1].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===3}" src="{{base[2].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===4}" src="{{base[3].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===5}" src="{{base[4].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===6}" src="{{base[5].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===7}" src="{{base[6].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===8}" src="{{base[7].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===9}" src="{{base[8].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===10}" src="{{base[9].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===11}" src="{{base[10].img}}">
+				<img class="base" [ngClass]="{'activation':targetId===12}" src="{{base[11].img}}">
+				<div class="pointBox">
+					<div class="accurate">
+						<div class="unit">
+							<div class="point1" *ngIf="pointBase[0]['pointList'][0]['isUse']===1"><div>{{pointBase[0]['pointList'][0]['pointId']}}</div></div>
+							<div class="point2" *ngIf="pointBase[0]['pointList'][1]['isUse']===1"><div>{{pointBase[0]['pointList'][1]['pointId']}}</div></div>
+							<div class="point3" *ngIf="pointBase[0]['pointList'][2]['isUse']===1"><div>{{pointBase[0]['pointList'][2]['pointId']}}</div></div>
+							<div class="point4" *ngIf="pointBase[0]['pointList'][3]['isUse']===1"><div>{{pointBase[0]['pointList'][3]['pointId']}}</div></div>
+							<div class="point5" *ngIf="pointBase[0]['pointList'][4]['isUse']===1"><div>{{pointBase[0]['pointList'][4]['pointId']}}</div></div>
+							<div class="point6" *ngIf="pointBase[0]['pointList'][5]['isUse']===1"><div>{{pointBase[0]['pointList'][5]['pointId']}}</div></div>
+							<div class="point7" *ngIf="pointBase[0]['pointList'][6]['isUse']===1"><div>{{pointBase[0]['pointList'][6]['pointId']}}</div></div>
+							<div class="point8" *ngIf="pointBase[0]['pointList'][7]['isUse']===1"><div>{{pointBase[0]['pointList'][7]['pointId']}}</div></div>
+							<div class="point9" *ngIf="pointBase[0]['pointList'][8]['isUse']===1"><div>{{pointBase[0]['pointList'][8]['pointId']}}</div></div>
+							<div class="point10" *ngIf="pointBase[0]['pointList'][9]['isUse']===1"><div>{{pointBase[0]['pointList'][9]['pointId']}}</div></div>
+							<div class="point11" *ngIf="pointBase[0]['pointList'][10]['isUse']===1"><div>{{pointBase[0]['pointList'][10]['pointId']}}</div></div>
+							<div class="point12" *ngIf="pointBase[0]['pointList'][11]['isUse']===1"><div>{{pointBase[0]['pointList'][11]['pointId']}}</div></div>
+							<div class="point13" *ngIf="pointBase[0]['pointList'][12]['isUse']===1"><div>{{pointBase[0]['pointList'][12]['pointId']}}</div></div>
+							<div class="point14" *ngIf="pointBase[0]['pointList'][13]['isUse']===1"><div>{{pointBase[0]['pointList'][13]['pointId']}}</div></div>
+							<div class="point15" *ngIf="pointBase[0]['pointList'][14]['isUse']===1"><div>{{pointBase[0]['pointList'][14]['pointId']}}</div></div>
+							<div class="point16" *ngIf="pointBase[0]['pointList'][15]['isUse']===1"><div>{{pointBase[0]['pointList'][15]['pointId']}}</div></div>
+							<div class="point17" *ngIf="pointBase[0]['pointList'][16]['isUse']===1"><div>{{pointBase[0]['pointList'][16]['pointId']}}</div></div>
+							<div class="point18" *ngIf="pointBase[0]['pointList'][17]['isUse']===1"><div>{{pointBase[0]['pointList'][17]['pointId']}}</div></div>
+							<div class="point19" *ngIf="pointBase[0]['pointList'][18]['isUse']===1"><div>{{pointBase[0]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point20" *ngIf="pointBase[1]['pointList'][0]['isUse']===1"><div>{{pointBase[1]['pointList'][0]['pointId']}}</div></div>
+							<div class="point21" *ngIf="pointBase[1]['pointList'][1]['isUse']===1"><div>{{pointBase[1]['pointList'][1]['pointId']}}</div></div>
+							<div class="point22" *ngIf="pointBase[1]['pointList'][2]['isUse']===1"><div>{{pointBase[1]['pointList'][2]['pointId']}}</div></div>
+							<div class="point23" *ngIf="pointBase[1]['pointList'][3]['isUse']===1"><div>{{pointBase[1]['pointList'][3]['pointId']}}</div></div>
+							<div class="point24" *ngIf="pointBase[1]['pointList'][4]['isUse']===1"><div>{{pointBase[1]['pointList'][4]['pointId']}}</div></div>
+							<div class="point25" *ngIf="pointBase[1]['pointList'][5]['isUse']===1"><div>{{pointBase[1]['pointList'][5]['pointId']}}</div></div>
+							<div class="point26" *ngIf="pointBase[1]['pointList'][6]['isUse']===1"><div>{{pointBase[1]['pointList'][6]['pointId']}}</div></div>
+							<div class="point27" *ngIf="pointBase[1]['pointList'][7]['isUse']===1"><div>{{pointBase[1]['pointList'][7]['pointId']}}</div></div>
+							<div class="point28" *ngIf="pointBase[1]['pointList'][8]['isUse']===1"><div>{{pointBase[1]['pointList'][8]['pointId']}}</div></div>
+							<div class="point29" *ngIf="pointBase[1]['pointList'][9]['isUse']===1"><div>{{pointBase[1]['pointList'][9]['pointId']}}</div></div>
+							<div class="point30" *ngIf="pointBase[1]['pointList'][10]['isUse']===1"><div>{{pointBase[1]['pointList'][10]['pointId']}}</div></div>
+							<div class="point31" *ngIf="pointBase[1]['pointList'][11]['isUse']===1"><div>{{pointBase[1]['pointList'][11]['pointId']}}</div></div>
+							<div class="point32" *ngIf="pointBase[1]['pointList'][12]['isUse']===1"><div>{{pointBase[1]['pointList'][12]['pointId']}}</div></div>
+							<div class="point33" *ngIf="pointBase[1]['pointList'][13]['isUse']===1"><div>{{pointBase[1]['pointList'][13]['pointId']}}</div></div>
+							<div class="point34" *ngIf="pointBase[1]['pointList'][14]['isUse']===1"><div>{{pointBase[1]['pointList'][14]['pointId']}}</div></div>
+							<div class="point35" *ngIf="pointBase[1]['pointList'][15]['isUse']===1"><div>{{pointBase[1]['pointList'][15]['pointId']}}</div></div>
+							<div class="point36" *ngIf="pointBase[1]['pointList'][16]['isUse']===1"><div>{{pointBase[1]['pointList'][16]['pointId']}}</div></div>
+							<div class="point37" *ngIf="pointBase[1]['pointList'][17]['isUse']===1"><div>{{pointBase[1]['pointList'][17]['pointId']}}</div></div>
+							<div class="point38" *ngIf="pointBase[1]['pointList'][18]['isUse']===1"><div>{{pointBase[1]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point39" *ngIf="pointBase[2]['pointList'][0]['isUse']===1"><div>{{pointBase[2]['pointList'][0]['pointId']}}</div></div>
+							<div class="point40" *ngIf="pointBase[2]['pointList'][1]['isUse']===1"><div>{{pointBase[2]['pointList'][1]['pointId']}}</div></div>
+							<div class="point41" *ngIf="pointBase[2]['pointList'][2]['isUse']===1"><div>{{pointBase[2]['pointList'][2]['pointId']}}</div></div>
+							<div class="point42" *ngIf="pointBase[2]['pointList'][3]['isUse']===1"><div>{{pointBase[2]['pointList'][3]['pointId']}}</div></div>
+							<div class="point43" *ngIf="pointBase[2]['pointList'][4]['isUse']===1"><div>{{pointBase[2]['pointList'][4]['pointId']}}</div></div>
+							<div class="point44" *ngIf="pointBase[2]['pointList'][5]['isUse']===1"><div>{{pointBase[2]['pointList'][5]['pointId']}}</div></div>
+							<div class="point45" *ngIf="pointBase[2]['pointList'][6]['isUse']===1"><div>{{pointBase[2]['pointList'][6]['pointId']}}</div></div>
+							<div class="point46" *ngIf="pointBase[2]['pointList'][7]['isUse']===1"><div>{{pointBase[2]['pointList'][7]['pointId']}}</div></div>
+							<div class="point47" *ngIf="pointBase[2]['pointList'][8]['isUse']===1"><div>{{pointBase[2]['pointList'][8]['pointId']}}</div></div>
+							<div class="point48" *ngIf="pointBase[2]['pointList'][9]['isUse']===1"><div>{{pointBase[2]['pointList'][9]['pointId']}}</div></div>
+							<div class="point49" *ngIf="pointBase[2]['pointList'][10]['isUse']===1"><div>{{pointBase[2]['pointList'][10]['pointId']}}</div></div>
+							<div class="point50" *ngIf="pointBase[2]['pointList'][11]['isUse']===1"><div>{{pointBase[2]['pointList'][11]['pointId']}}</div></div>
+							<div class="point51" *ngIf="pointBase[2]['pointList'][12]['isUse']===1"><div>{{pointBase[2]['pointList'][12]['pointId']}}</div></div>
+							<div class="point52" *ngIf="pointBase[2]['pointList'][13]['isUse']===1"><div>{{pointBase[2]['pointList'][13]['pointId']}}</div></div>
+							<div class="point53" *ngIf="pointBase[2]['pointList'][14]['isUse']===1"><div>{{pointBase[2]['pointList'][14]['pointId']}}</div></div>
+							<div class="point54" *ngIf="pointBase[2]['pointList'][15]['isUse']===1"><div>{{pointBase[2]['pointList'][15]['pointId']}}</div></div>
+							<div class="point55" *ngIf="pointBase[2]['pointList'][16]['isUse']===1"><div>{{pointBase[2]['pointList'][16]['pointId']}}</div></div>
+							<div class="point56" *ngIf="pointBase[2]['pointList'][17]['isUse']===1"><div>{{pointBase[2]['pointList'][17]['pointId']}}</div></div>
+							<div class="point57" *ngIf="pointBase[2]['pointList'][18]['isUse']===1"><div>{{pointBase[2]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point58" *ngIf="pointBase[3]['pointList'][0]['isUse']===1"><div>{{pointBase[3]['pointList'][0]['pointId']}}</div></div>
+							<div class="point59" *ngIf="pointBase[3]['pointList'][1]['isUse']===1"><div>{{pointBase[3]['pointList'][1]['pointId']}}</div></div>
+							<div class="point60" *ngIf="pointBase[3]['pointList'][2]['isUse']===1"><div>{{pointBase[3]['pointList'][2]['pointId']}}</div></div>
+							<div class="point61" *ngIf="pointBase[3]['pointList'][3]['isUse']===1"><div>{{pointBase[3]['pointList'][3]['pointId']}}</div></div>
+							<div class="point62" *ngIf="pointBase[3]['pointList'][4]['isUse']===1"><div>{{pointBase[3]['pointList'][4]['pointId']}}</div></div>
+							<div class="point63" *ngIf="pointBase[3]['pointList'][5]['isUse']===1"><div>{{pointBase[3]['pointList'][5]['pointId']}}</div></div>
+							<div class="point64" *ngIf="pointBase[3]['pointList'][6]['isUse']===1"><div>{{pointBase[3]['pointList'][6]['pointId']}}</div></div>
+							<div class="point65" *ngIf="pointBase[3]['pointList'][7]['isUse']===1"><div>{{pointBase[3]['pointList'][7]['pointId']}}</div></div>
+							<div class="point66" *ngIf="pointBase[3]['pointList'][8]['isUse']===1"><div>{{pointBase[3]['pointList'][8]['pointId']}}</div></div>
+							<div class="point67" *ngIf="pointBase[3]['pointList'][9]['isUse']===1"><div>{{pointBase[3]['pointList'][9]['pointId']}}</div></div>
+							<div class="point68" *ngIf="pointBase[3]['pointList'][10]['isUse']===1"><div>{{pointBase[3]['pointList'][10]['pointId']}}</div></div>
+							<div class="point69" *ngIf="pointBase[3]['pointList'][11]['isUse']===1"><div>{{pointBase[3]['pointList'][11]['pointId']}}</div></div>
+							<div class="point70" *ngIf="pointBase[3]['pointList'][12]['isUse']===1"><div>{{pointBase[3]['pointList'][12]['pointId']}}</div></div>
+							<div class="point71" *ngIf="pointBase[3]['pointList'][13]['isUse']===1"><div>{{pointBase[3]['pointList'][13]['pointId']}}</div></div>
+							<div class="point72" *ngIf="pointBase[3]['pointList'][14]['isUse']===1"><div>{{pointBase[3]['pointList'][14]['pointId']}}</div></div>
+							<div class="point73" *ngIf="pointBase[3]['pointList'][15]['isUse']===1"><div>{{pointBase[3]['pointList'][15]['pointId']}}</div></div>
+							<div class="point74" *ngIf="pointBase[3]['pointList'][16]['isUse']===1"><div>{{pointBase[3]['pointList'][16]['pointId']}}</div></div>
+							<div class="point75" *ngIf="pointBase[3]['pointList'][17]['isUse']===1"><div>{{pointBase[3]['pointList'][17]['pointId']}}</div></div>
+							<div class="point76" *ngIf="pointBase[3]['pointList'][18]['isUse']===1"><div>{{pointBase[3]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point77" *ngIf="pointBase[4]['pointList'][0]['isUse']===1"><div>{{pointBase[4]['pointList'][0]['pointId']}}</div></div>
+							<div class="point78" *ngIf="pointBase[4]['pointList'][1]['isUse']===1"><div>{{pointBase[4]['pointList'][1]['pointId']}}</div></div>
+							<div class="point79" *ngIf="pointBase[4]['pointList'][2]['isUse']===1"><div>{{pointBase[4]['pointList'][2]['pointId']}}</div></div>
+							<div class="point80" *ngIf="pointBase[4]['pointList'][3]['isUse']===1"><div>{{pointBase[4]['pointList'][3]['pointId']}}</div></div>
+							<div class="point81" *ngIf="pointBase[4]['pointList'][4]['isUse']===1"><div>{{pointBase[4]['pointList'][4]['pointId']}}</div></div>
+							<div class="point82" *ngIf="pointBase[4]['pointList'][5]['isUse']===1"><div>{{pointBase[4]['pointList'][5]['pointId']}}</div></div>
+							<div class="point83" *ngIf="pointBase[4]['pointList'][6]['isUse']===1"><div>{{pointBase[4]['pointList'][6]['pointId']}}</div></div>
+							<div class="point84" *ngIf="pointBase[4]['pointList'][7]['isUse']===1"><div>{{pointBase[4]['pointList'][7]['pointId']}}</div></div>
+							<div class="point85" *ngIf="pointBase[4]['pointList'][8]['isUse']===1"><div>{{pointBase[4]['pointList'][8]['pointId']}}</div></div>
+							<div class="point86" *ngIf="pointBase[4]['pointList'][9]['isUse']===1"><div>{{pointBase[4]['pointList'][9]['pointId']}}</div></div>
+							<div class="point87" *ngIf="pointBase[4]['pointList'][10]['isUse']===1"><div>{{pointBase[4]['pointList'][10]['pointId']}}</div></div>
+							<div class="point88" *ngIf="pointBase[4]['pointList'][11]['isUse']===1"><div>{{pointBase[4]['pointList'][11]['pointId']}}</div></div>
+							<div class="point89" *ngIf="pointBase[4]['pointList'][12]['isUse']===1"><div>{{pointBase[4]['pointList'][12]['pointId']}}</div></div>
+							<div class="point90" *ngIf="pointBase[4]['pointList'][13]['isUse']===1"><div>{{pointBase[4]['pointList'][13]['pointId']}}</div></div>
+							<div class="point91" *ngIf="pointBase[4]['pointList'][14]['isUse']===1"><div>{{pointBase[4]['pointList'][14]['pointId']}}</div></div>
+							<div class="point92" *ngIf="pointBase[4]['pointList'][15]['isUse']===1"><div>{{pointBase[4]['pointList'][15]['pointId']}}</div></div>
+							<div class="point93" *ngIf="pointBase[4]['pointList'][16]['isUse']===1"><div>{{pointBase[4]['pointList'][16]['pointId']}}</div></div>
+							<div class="point94" *ngIf="pointBase[4]['pointList'][17]['isUse']===1"><div>{{pointBase[4]['pointList'][17]['pointId']}}</div></div>
+							<div class="point95" *ngIf="pointBase[4]['pointList'][18]['isUse']===1"><div>{{pointBase[4]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point96" *ngIf="pointBase[5]['pointList'][0]['isUse']===1"><div>{{pointBase[5]['pointList'][0]['pointId']}}</div></div>
+							<div class="point97" *ngIf="pointBase[5]['pointList'][1]['isUse']===1"><div>{{pointBase[5]['pointList'][1]['pointId']}}</div></div>
+							<div class="point98" *ngIf="pointBase[5]['pointList'][2]['isUse']===1"><div>{{pointBase[5]['pointList'][2]['pointId']}}</div></div>
+							<div class="point99" *ngIf="pointBase[5]['pointList'][3]['isUse']===1"><div>{{pointBase[5]['pointList'][3]['pointId']}}</div></div>
+							<div class="point100" *ngIf="pointBase[5]['pointList'][4]['isUse']===1"><div>{{pointBase[5]['pointList'][4]['pointId']}}</div></div>
+							<div class="point101" *ngIf="pointBase[5]['pointList'][5]['isUse']===1"><div>{{pointBase[5]['pointList'][5]['pointId']}}</div></div>
+							<div class="point102" *ngIf="pointBase[5]['pointList'][6]['isUse']===1"><div>{{pointBase[5]['pointList'][6]['pointId']}}</div></div>
+							<div class="point103" *ngIf="pointBase[5]['pointList'][7]['isUse']===1"><div>{{pointBase[5]['pointList'][7]['pointId']}}</div></div>
+							<div class="point104" *ngIf="pointBase[5]['pointList'][8]['isUse']===1"><div>{{pointBase[5]['pointList'][8]['pointId']}}</div></div>
+							<div class="point105" *ngIf="pointBase[5]['pointList'][9]['isUse']===1"><div>{{pointBase[5]['pointList'][9]['pointId']}}</div></div>
+							<div class="point106" *ngIf="pointBase[5]['pointList'][10]['isUse']===1"><div>{{pointBase[5]['pointList'][10]['pointId']}}</div></div>
+							<div class="point107" *ngIf="pointBase[5]['pointList'][11]['isUse']===1"><div>{{pointBase[5]['pointList'][11]['pointId']}}</div></div>
+							<div class="point108" *ngIf="pointBase[5]['pointList'][12]['isUse']===1"><div>{{pointBase[5]['pointList'][12]['pointId']}}</div></div>
+							<div class="point109" *ngIf="pointBase[5]['pointList'][13]['isUse']===1"><div>{{pointBase[5]['pointList'][13]['pointId']}}</div></div>
+							<div class="point110" *ngIf="pointBase[5]['pointList'][14]['isUse']===1"><div>{{pointBase[5]['pointList'][14]['pointId']}}</div></div>
+							<div class="point111" *ngIf="pointBase[5]['pointList'][15]['isUse']===1"><div>{{pointBase[5]['pointList'][15]['pointId']}}</div></div>
+							<div class="point112" *ngIf="pointBase[5]['pointList'][16]['isUse']===1"><div>{{pointBase[5]['pointList'][16]['pointId']}}</div></div>
+							<div class="point113" *ngIf="pointBase[5]['pointList'][17]['isUse']===1"><div>{{pointBase[5]['pointList'][17]['pointId']}}</div></div>
+							<div class="point114" *ngIf="pointBase[5]['pointList'][18]['isUse']===1"><div>{{pointBase[5]['pointList'][18]['pointId']}}</div></div>
+						</div>
+						<div class="unit">
+							<div class="point115" *ngIf="pointBase[6]['pointList'][0]['isUse']===1"><div>{{pointBase[6]['pointList'][0]['pointId']}}</div></div>
+							<div class="point116" *ngIf="pointBase[6]['pointList'][1]['isUse']===1"><div>{{pointBase[6]['pointList'][1]['pointId']}}</div></div>
+							<div class="point117" *ngIf="pointBase[6]['pointList'][2]['isUse']===1"><div>{{pointBase[6]['pointList'][2]['pointId']}}</div></div>
+							<div class="point118" *ngIf="pointBase[6]['pointList'][3]['isUse']===1"><div>{{pointBase[6]['pointList'][3]['pointId']}}</div></div>
+							<div class="point119" *ngIf="pointBase[6]['pointList'][4]['isUse']===1"><div>{{pointBase[6]['pointList'][4]['pointId']}}</div></div>
+							<div class="point120" *ngIf="pointBase[6]['pointList'][5]['isUse']===1"><div>{{pointBase[6]['pointList'][5]['pointId']}}</div></div>
+							<div class="point121" *ngIf="pointBase[6]['pointList'][6]['isUse']===1"><div>{{pointBase[6]['pointList'][6]['pointId']}}</div></div>
+							<div class="point122" *ngIf="pointBase[6]['pointList'][7]['isUse']===1"><div>{{pointBase[6]['pointList'][7]['pointId']}}</div></div>
+							<div class="point123" *ngIf="pointBase[6]['pointList'][8]['isUse']===1"><div>{{pointBase[6]['pointList'][8]['pointId']}}</div></div>
+							<div class="point124" *ngIf="pointBase[6]['pointList'][9]['isUse']===1"><div>{{pointBase[6]['pointList'][9]['pointId']}}</div></div>
+							<div class="point125" *ngIf="pointBase[6]['pointList'][10]['isUse']===1"><div>{{pointBase[6]['pointList'][10]['pointId']}}</div></div>
+							<div class="point126" *ngIf="pointBase[6]['pointList'][11]['isUse']===1"><div>{{pointBase[6]['pointList'][11]['pointId']}}</div></div>
+							<div class="point127" *ngIf="pointBase[6]['pointList'][12]['isUse']===1"><div>{{pointBase[6]['pointList'][12]['pointId']}}</div></div>
+							<div class="point128" *ngIf="pointBase[6]['pointList'][13]['isUse']===1"><div>{{pointBase[6]['pointList'][13]['pointId']}}</div></div>
+							<div class="point129" *ngIf="pointBase[6]['pointList'][14]['isUse']===1"><div>{{pointBase[6]['pointList'][14]['pointId']}}</div></div>
+							<div class="point130" *ngIf="pointBase[6]['pointList'][15]['isUse']===1"><div>{{pointBase[6]['pointList'][15]['pointId']}}</div></div>
+							<div class="point131" *ngIf="pointBase[6]['pointList'][16]['isUse']===1"><div>{{pointBase[6]['pointList'][16]['pointId']}}</div></div>
+							<div class="point132" *ngIf="pointBase[6]['pointList'][17]['isUse']===1"><div>{{pointBase[6]['pointList'][17]['pointId']}}</div></div>
+							<div class="point133" *ngIf="pointBase[6]['pointList'][18]['isUse']===1"><div>{{pointBase[6]['pointList'][18]['pointId']}}</div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="doBox">
+			<div class="left" (click)="turnLeft()">向左</div>
+			<div class="right" (click)="turnRight()">向右</div>
+		</div>
+	</div>
+</div>
