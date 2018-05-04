@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.less']
+  selector: 'app-strain',
+  templateUrl: './strain.component.html',
+  styleUrls: ['./strain.component.less']
 })
-export class HomeComponent implements OnInit {
+export class StrainComponent implements OnInit {
 	base = [
 		{
 			"img":"./assets/image/1/1.jpg",
@@ -60,13 +60,14 @@ export class HomeComponent implements OnInit {
 	targetBase: string
 	targetId: number
 	pointBase = []
-	// 1-应变-温度监测点;2-风压测点;3-结构变形-GNSS测点;4-气象站;
+	targetPointId:number
   constructor(
   	private Router: Router,
   	private Route: ActivatedRoute
  	) { }
 
   ngOnInit() {
+  	this.targetPointId = +this.Route.snapshot.params['number'];
   	this.targetBase = this.base[0].img;
   	this.targetId = this.base[0]['id'];
   	// TemplateStringsArray
@@ -80,6 +81,13 @@ export class HomeComponent implements OnInit {
 			this.pointBase[i] = pointList;
 		}
   	// console.log(this.pointBase);
+  }
+
+  choosePoint(pointId,i){
+  	// console.log(pointId,i);
+  	// this.pointBase[i]['selected'] = 1;
+  	// console.log(this.pointBase[i]);
+  	this.targetPointId = pointId;
   }
 
   // 向左转

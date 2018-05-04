@@ -24,17 +24,17 @@
 				<img class="base" [ngClass]="{'activation':targetId===10}" src="{{base[9].img}}">
 				<img class="base" [ngClass]="{'activation':targetId===11}" src="{{base[10].img}}">
 				<img class="base" [ngClass]="{'activation':targetId===12}" src="{{base[11].img}}">
-<!-- 				<div class="pointBox">
+				<div class="pointBox">
 					<div class="accurate">
-						<div *ngFor="let point of pointBase">
+						<div *ngFor="let point of pointBase; let i=index;">
 							<div *ngIf="point['isUse']===1">
-								<div [ngClass]="'point'+point['id']">
-									<div>{{point['pointId']}}</div>
+								<div [ngClass]="'point'+point['id']" (click)="choosePoint(point['pointId'],i)">
+									<div [ngClass]="{'selected':targetPointId===point['pointId']}">{{point['pointId']}}</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 		<div class="doBox">

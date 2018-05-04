@@ -2,71 +2,72 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.less']
+  selector: 'app-structure',
+  templateUrl: './structure.component.html',
+  styleUrls: ['./structure.component.less']
 })
-export class HomeComponent implements OnInit {
+export class StructureComponent implements OnInit {
 	base = [
 		{
-			"img":"./assets/image/1/1.jpg",
+			"img":"./assets/image/3/1.jpg",
 			"id":1
 		},
 		{
-			"img":"./assets/image/1/2.jpg",
+			"img":"./assets/image/3/2.jpg",
 			"id":2
 		},
 		{
-			"img":"./assets/image/1/3.jpg",
+			"img":"./assets/image/3/3.jpg",
 			"id":3
 		},
 		{
-			"img":"./assets/image/1/4.jpg",
+			"img":"./assets/image/3/4.jpg",
 			"id":4
 		},
 		{
-			"img":"./assets/image/1/5.jpg",
+			"img":"./assets/image/3/5.jpg",
 			"id":5
 		},
 		{
-			"img":"./assets/image/1/6.jpg",
+			"img":"./assets/image/3/6.jpg",
 			"id":6
 		},
 		{
-			"img":"./assets/image/1/7.jpg",
+			"img":"./assets/image/3/7.jpg",
 			"id":7
 		},
 		{
-			"img":"./assets/image/1/8.jpg",
+			"img":"./assets/image/3/8.jpg",
 			"id":8
 		},
 		{
-			"img":"./assets/image/1/9.jpg",
+			"img":"./assets/image/3/9.jpg",
 			"id":9
 		},
 		{
-			"img":"./assets/image/1/10.jpg",
+			"img":"./assets/image/3/10.jpg",
 			"id":10
 		},
 		{
-			"img":"./assets/image/1/11.jpg",
+			"img":"./assets/image/3/11.jpg",
 			"id":11
 		},
 		{
-			"img":"./assets/image/1/12.jpg",
+			"img":"./assets/image/3/12.jpg",
 			"id":12
 		}
 	]
 	targetBase: string
 	targetId: number
 	pointBase = []
-	// 1-应变-温度监测点;2-风压测点;3-结构变形-GNSS测点;4-气象站;
+	targetPointId:number
   constructor(
   	private Router: Router,
   	private Route: ActivatedRoute
  	) { }
 
   ngOnInit() {
+  	this.targetPointId = +this.Route.snapshot.params['number'];
   	this.targetBase = this.base[0].img;
   	this.targetId = this.base[0]['id'];
   	// TemplateStringsArray
@@ -82,6 +83,12 @@ export class HomeComponent implements OnInit {
   	// console.log(this.pointBase);
   }
 
+  choosePoint(pointId,i){
+  	// console.log(pointId,i);
+  	// this.pointBase[i]['selected'] = 1;
+  	// console.log(this.pointBase[i]);
+  	this.targetPointId = pointId;
+  }
   // 向左转
   turnLeft(){
   	// console.log(this.targetId+'初始');

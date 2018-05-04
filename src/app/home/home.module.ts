@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+import { PressureComponent } from './pressure/pressure.component';
+import { StrainComponent } from './strain/strain.component';
+import { StructureComponent } from './structure/structure.component';
+import { WeatherComponent } from './weather/weather.component';
 
 import { HomeRoutes } from './home.routes'
 
@@ -17,7 +21,11 @@ import { HomeRoutes } from './home.routes'
     RouterModule.forChild(HomeRoutes)
   ],
   declarations: [
-  	HomeComponent
+  	HomeComponent,
+  	PressureComponent,
+  	StrainComponent,
+  	StructureComponent,
+  	WeatherComponent
   ]
 })
 export class HomeModule { }
