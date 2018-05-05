@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
 	targetBase: string
 	targetId: number
 	pointBase = []
+	menuDate:number
 	// 1-应变-温度监测点;2-风压测点;3-结构变形-GNSS测点;4-气象站;
   constructor(
   	private Router: Router,

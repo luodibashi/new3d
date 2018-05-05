@@ -61,6 +61,7 @@ export class StructureComponent implements OnInit {
 	targetId: number
 	pointBase = []
 	targetPointId:number
+	order:number
   constructor(
   	private Router: Router,
   	private Route: ActivatedRoute
@@ -68,6 +69,7 @@ export class StructureComponent implements OnInit {
 
   ngOnInit() {
   	this.targetPointId = +this.Route.snapshot.params['number'];
+  	this.order = +this.Route.snapshot.params['order'];
   	this.targetBase = this.base[0].img;
   	this.targetId = this.base[0]['id'];
   	// TemplateStringsArray
@@ -329,6 +331,6 @@ export class StructureComponent implements OnInit {
 		  	}
   		}
   	// console.log(this.targetId)
-  }
+  	}
 	}
 }

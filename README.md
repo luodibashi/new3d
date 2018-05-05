@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+规则：
+整个塔身共计228个编码位置，对应测点已编辑相应序号，访问时需传入该点位即可
+全览图：
+http://47.97.118.134/tower/#/tower/center
+1、应变-温度测点
+http://47.97.118.134/tower/#/tower/strain/{number}/0
+参数：number-测点点位
+2、风压测点
+http://47.97.118.134/tower/#/tower/pressure/{number}/0
+3、结构变形-GNSS测点
+http://47.97.118.134/tower/#/tower/structure/{number}/0
+4、气象站
+http://47.97.118.134/tower/#/tower/weather/{number}/0

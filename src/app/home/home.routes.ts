@@ -15,19 +15,19 @@ export const HomeRoutes: Route[] = [{
 			component: HomeComponent
 		},
 		{
-			path: 'strain/:number',
+			path: 'strain/:number/:order',
 			component: StrainComponent
 		},
 		{
-			path: 'pressure/:number',
+			path: 'pressure/:number/:order',
 			component: PressureComponent
 		},
 		{
-			path: 'structure/:number',
+			path: 'structure/:number/:order',
 			component: StructureComponent
 		},
 		{
-			path: 'weather/:number',
+			path: 'weather/:number/:order',
 			component: WeatherComponent
 		}
 	]

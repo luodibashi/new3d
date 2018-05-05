@@ -11,7 +11,8 @@ import { StrainComponent } from './strain/strain.component';
 import { StructureComponent } from './structure/structure.component';
 import { WeatherComponent } from './weather/weather.component';
 
-import { HomeRoutes } from './home.routes'
+import { HomeRoutes } from './home.routes';
+import { MenuComponent } from './menu/menu.component'
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { HomeRoutes } from './home.routes'
   	PressureComponent,
   	StrainComponent,
   	StructureComponent,
-  	WeatherComponent
+  	WeatherComponent,
+  	MenuComponent
   ]
 })
 export class HomeModule { }
