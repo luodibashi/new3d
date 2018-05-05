@@ -90,6 +90,7 @@ export class StructureComponent implements OnInit {
   	// this.pointBase[i]['selected'] = 1;
   	// console.log(this.pointBase[i]);
   	this.targetPointId = pointId;
+		this.Router.navigate(['tower/structure/'+this.targetPointId+'/'+this.order]);
   }
   // 向左转
   turnLeft(){
