@@ -9,58 +9,58 @@ import { ActivatedRoute, Router, Params } from '@angular/router'
 export class HomeComponent implements OnInit {
 	base = [
 		{
-			"img":"./assets/image/1/1.jpg",
+			"img":"./assets/image/4/1.jpg",
 			"id":1
 		},
 		{
-			"img":"./assets/image/1/2.jpg",
+			"img":"./assets/image/4/2.jpg",
 			"id":2
 		},
 		{
-			"img":"./assets/image/1/3.jpg",
+			"img":"./assets/image/4/3.jpg",
 			"id":3
 		},
 		{
-			"img":"./assets/image/1/4.jpg",
+			"img":"./assets/image/4/4.jpg",
 			"id":4
 		},
 		{
-			"img":"./assets/image/1/5.jpg",
+			"img":"./assets/image/4/5.jpg",
 			"id":5
 		},
 		{
-			"img":"./assets/image/1/6.jpg",
+			"img":"./assets/image/4/6.jpg",
 			"id":6
 		},
 		{
-			"img":"./assets/image/1/7.jpg",
+			"img":"./assets/image/4/7.jpg",
 			"id":7
 		},
 		{
-			"img":"./assets/image/1/8.jpg",
+			"img":"./assets/image/4/8.jpg",
 			"id":8
 		},
 		{
-			"img":"./assets/image/1/9.jpg",
+			"img":"./assets/image/4/9.jpg",
 			"id":9
 		},
 		{
-			"img":"./assets/image/1/10.jpg",
+			"img":"./assets/image/4/10.jpg",
 			"id":10
 		},
 		{
-			"img":"./assets/image/1/11.jpg",
+			"img":"./assets/image/4/11.jpg",
 			"id":11
 		},
 		{
-			"img":"./assets/image/1/12.jpg",
+			"img":"./assets/image/4/12.jpg",
 			"id":12
 		}
 	]
 	targetBase: string
 	targetId: number
 	pointBase = []
-	menuDate:number
+	watchType:number = 0
 	// 1-应变-温度监测点;2-风压测点;3-结构变形-GNSS测点;4-气象站;
   constructor(
   	private Router: Router,

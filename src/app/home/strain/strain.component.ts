@@ -62,6 +62,7 @@ export class StrainComponent implements OnInit {
 	pointBase = []
 	targetPointId:number
 	order:number
+	watchType:number = 1
   constructor(
   	private Router: Router,
   	private Route: ActivatedRoute
@@ -91,79 +92,11 @@ export class StrainComponent implements OnInit {
 
   // 配置是否启用该点
   getPointUsed(i,pointId){
-  	switch (pointId){
-			case 42:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 44:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 46:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 52:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 54:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 57:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 99:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 101:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 103:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 109:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 111:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 114:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 156:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 158:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 160:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 166:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 168:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 171:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 213:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 215:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 217:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 223:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 225:
-				this.pointBase[i]['isUse'] = 1;
-				break;
-			case 228:
-				this.pointBase[i]['isUse'] = 1;
-				break;
+  	let usedPoint = [42,44,46,52,54,57,99,101,103,109,111,114,156,158,160,166,168,171,213,215,217,223,225,228]
+		if(usedPoint.indexOf(pointId)!=-1){
+			this.pointBase[i]['isUse'] = 1;
+		} else {
+			this.pointBase[i]['isUse'] = 0;
 		}
   }
 
@@ -171,16 +104,17 @@ export class StrainComponent implements OnInit {
   	// console.log(pointId,i);
   	// this.pointBase[i]['selected'] = 1;
   	// console.log(this.pointBase[i]);
-  	this.targetPointId = pointId;
-		this.Router.navigate(['tower/strain/'+this.targetPointId+'/'+this.order]);
+  	if(this.targetPointId === pointId){
+  		this.targetPointId = 0;
+			this.Router.navigate(['tower/strain/0'+'/'+this.order]);
+  	} else {
+	  	this.targetPointId = pointId;
+			this.Router.navigate(['tower/strain/'+this.targetPointId+'/'+this.order]);
+  	}
   }
 
   // 向左转
   turnLeft(){
-  	// 重置isUse参数
-  	for(let i=0; i<133;i++){
-			this.pointBase[i]['isUse'] = 0;
-		}
   	// console.log(this.targetId+'初始');
   	if(this.targetId==1){
   		this.targetId = 12
@@ -320,10 +254,6 @@ export class StrainComponent implements OnInit {
   }
   // 向右转
   turnRight(){
-  	// 重置isUse参数
-  	for(let i=0; i<133;i++){
-			this.pointBase[i]['isUse'] = 0;
-		}
   	// console.log(this.targetId);
   	if(this.targetId==12){
   		this.targetId = 1

@@ -62,6 +62,7 @@ export class WeatherComponent implements OnInit {
 	pointBase = []
 	targetPointId:number
 	order:number
+	watchType:number = 4
   constructor(
   	private Router: Router,
   	private Route: ActivatedRoute
@@ -78,19 +79,34 @@ export class WeatherComponent implements OnInit {
 			let pointList = {};
 			a++;
 			pointList['id'] = a;
-			pointList['isUse'] = 1;
+			pointList['isUse'] = 0;
 			pointList['pointId'] = a;
 			this.pointBase[i] = pointList;
+			this.getPointUsed(i,a);
 		}
   	// console.log(this.pointBase);
   }
 
+  // 配置是否启用该点
+  getPointUsed(i,pointId){
+  	let usedPoint = [153,171]
+		if(usedPoint.indexOf(pointId)!=-1){
+			this.pointBase[i]['isUse'] = 1;
+		} else {
+			this.pointBase[i]['isUse'] = 0;
+		}
+  }
   choosePoint(pointId,i){
   	// console.log(pointId,i);
   	// this.pointBase[i]['selected'] = 1;
   	// console.log(this.pointBase[i]);
-  	this.targetPointId = pointId;
-		this.Router.navigate(['tower/weather/'+this.targetPointId+'/'+this.order]);
+  	if(this.targetPointId === pointId){
+  		this.targetPointId = 0;
+			this.Router.navigate(['tower/weather/0'+'/'+this.order]);
+  	} else {
+	  	this.targetPointId = pointId;
+			this.Router.navigate(['tower/weather/'+this.targetPointId+'/'+this.order]);
+  	}
   }
   // 向左转
   turnLeft(){
@@ -102,12 +118,14 @@ export class WeatherComponent implements OnInit {
 	  	for(let i=0;i<19; i++){
 	  		a++;
 				this.pointBase[i]['pointId'] = a;
+				this.getPointUsed(i,a);
 	  	}
 	  	let b=0;
 	  	for(let i=19;i<133; i++){
 	  		// a++;
 	  		b++;
 				this.pointBase[i]['pointId'] = b;
+				this.getPointUsed(i,b);
 	  	}
   	} else {
   		this.targetId--;
@@ -118,96 +136,112 @@ export class WeatherComponent implements OnInit {
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==2){
 				let a=19;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==3){
 				let a=38;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==4){
 				let a=57;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==5){
 				let a=76;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==6){
 				let a=95;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==7){
 				let a=114;
 		  	for(let i=0;i<114; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=114;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==8){
 				let a=133;
 		  	for(let i=0;i<95; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=95;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==9){
 				let a=152;
 		  	for(let i=0;i<76; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=76;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==10){
 				let a=171;
 		  	for(let i=0;i<57; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=57;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==11){
 				let a=190;
 		  	for(let i=0;i<38; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=38;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		}
   	}
@@ -223,6 +257,7 @@ export class WeatherComponent implements OnInit {
 	  	for(let i=0;i<this.pointBase.length; i++){
 	  		a++;
 				this.pointBase[i]['pointId'] = a;
+				this.getPointUsed(i,a);
 	  	}
   	} else {
   		this.targetId++;
@@ -233,102 +268,119 @@ export class WeatherComponent implements OnInit {
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==3){
 				let a=38;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==4){
 				let a=57;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==5){
 				let a=76;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==6){
 				let a=95;
 		  	for(let i=0;i<133; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
   		} else if(this.targetId==7){
 				let a=114;
 		  	for(let i=0;i<114; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=114;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==8){
 				let a=133;
 		  	for(let i=0;i<95; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=95;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==9){
 				let a=152;
 		  	for(let i=0;i<76; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=76;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==10){
 				let a=171;
 		  	for(let i=0;i<57; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=57;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==11){
 				let a=190;
 		  	for(let i=0;i<38; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=38;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		} else if(this.targetId==12){
 				let a=209;
 		  	for(let i=0;i<19; i++){
 		  		a++;
 					this.pointBase[i]['pointId'] = a;
+					this.getPointUsed(i,a);
 		  	}
 		  	let b=0;
 		  	for(let i=19;i<133; i++){
 		  		// a++;
 		  		b++;
 					this.pointBase[i]['pointId'] = b;
+					this.getPointUsed(i,b);
 		  	}
   		}
   	// console.log(this.targetId)
